@@ -1,10 +1,19 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <navhead />
+  <router-view />
 </template>
+
+<script>
+import Navhead from "@/components/NavHead.vue";
+import variables from "@/main.js";
+
+export default {
+  name: "AppView",
+  components: {
+    Navhead,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -25,6 +34,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: rgb(255, 118, 54);
 }
 </style>
